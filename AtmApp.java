@@ -1,18 +1,16 @@
-// Save file name as AtmApp.java
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Customer {
     private String name;
     private int cid;
-    private int accNo;
+    private long accNo;
     private String branch;
     private String bank;
     private int balance = 0;
     private int pin = 5566;
 
-    public Customer(String name, int cid, int accNo, String branch, String bank) {
+    public Customer(String name, int cid, long accNo, String branch, String bank) {
         this.name = name;
         this.cid = cid;
         this.accNo = accNo;
@@ -105,7 +103,7 @@ public class AtmApp {
             int cid = sc.nextInt();
 
             System.out.print("Enter Account Number   : ");
-            int accNo = sc.nextInt();
+            long accNo = sc.nextLong();
 
             Customer customer = new Customer(name, cid, accNo, branch, bank);
             customer.displayDetails();
